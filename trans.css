@@ -1,0 +1,17 @@
+.image-container {
+    width: 300px; /* Ancho de tu imagen */
+    height: 200px; /* Altura de tu imagen */
+    overflow: hidden; /* Para ocultar partes de la imagen que desborden */
+  }
+  
+  #fadeImage {
+    width: 100%;
+    height: auto;
+    opacity: 1; /* Opacidad inicial */
+    transition: opacity 2s ease-out; /* Transición de opacidad durante 2 segundos */
+  }
+  
+  .fade-out {
+    opacity: 0; /* Opacidad final */
+  }
+  

@@ -1,0 +1,55 @@
+CSS
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos para dispositivos grandes */
+@media screen and (min-width: 768px) {
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+}
+
+
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 767px) {
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

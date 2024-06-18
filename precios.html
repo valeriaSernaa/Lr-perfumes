@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con CSS Icons y Fondo Animado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff6b6b, #ffcc5c, #88d8b0, #4ecdc4);
+            background-size: 800% 800%;
+            animation: gradientBackground 15s ease infinite;
+        }
+
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+
+        nav ul li a:hover {
+            color: #ffcc5c;
+        }
+
+
+        nav ul li a i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Serna Carbajal Valeria</h2>
+    <nav>
+        <ul>
+            <li><a href="lrperfumes.html"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="acercade.html"><i class="fas fa-info-circle"></i>Acerca de</a></li>
+            <li><a href="contactanos.html"><i class="fas fa-envelope"></i>Contacto</a></li>
+            <li><a href="clientesfre.html"><i class="fas fa-user"></i>Perfil</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+
+    
+    <body style="background-color:rgb(255, 255, 124); ">
+        <div id="miDiv">Ancho y alto de la ventana: </div>
+
+        <script>
+            // Seleccionamos el div
+            var div = document.getElementById('miDiv');
+    
+            // Función para actualizar el contenido del div con el tamaño de la ventana
+            function actualizarDimensiones() {
+                div.textContent = 'Ancho de la ventana: ' + window.innerWidth + 'px, Alto de la ventana: ' + window.innerHeight + 'px';
+            }
+    
+            // Añadimos el listener para el evento 'resize'
+            window.addEventListener('resize', function() {
+                actualizarDimensiones();
+            });
+    
+            // Llamamos a la función al cargar la página para mostrar las dimensiones iniciales
+            actualizarDimensiones();
+        </script>
+    <header>
+        <i><h1><p style="color: #f1f3f5;">Prueba tus Precios Aqui</h1></p>
+    </header>
+   
+
+<script>
+
+</script>
+
+<label for="miInput">Ingresa el precio de sus productos:</label>
+<input type="text" id="miInput">
+
+<div id="resultado"></div>
+
+<script>
+    var input = document.getElementById('miInput');
+    var resultado = document.getElementById('resultado');
+
+    // Añadimos el listener para el evento 'input' al input
+    input.addEventListener('input', function() {
+        var valor = input.value;
+        resultado.textContent = 'Precio de cada producto, ' + valor + '!';
+    });
+</script>
+<br><br>
+
+<!-- Input para ingresar un número -->
+<label for="numero">Ingresa tu total:</label>
+<input type="number" id="numero">
+
+<!-- Botones para realizar operaciones -->
+<button onclick="incrementar()">Incrementar</button>
+<button onclick="decrementar()">Decrementar</button>
+<button onclick="calcularFactorial()">Factorial</button>
+<button onclick="operadorUnario()">Operador Unario</button>
+
+<!-- Resultados -->
+<p>Resultado: <span id="resultado"></span></p>
+
+<script>
+// Función para incrementar el número
+function incrementar() {
+    var numero = document.getElementById("numero").value;
+    numero++;
+    document.getElementById("resultado").textContent = numero;
+}
+
+// Función para decrementar el número
+function decrementar() {
+    var numero = document.getElementById("numero").value;
+    numero--;
+    document.getElementById("resultado").textContent = numero;
+}
+
+// Función para calcular el factorial
+function calcularFactorial() {
+    var numero = document.getElementById("numero").value;
+    var factorial = 1;
+    for (var i = 1; i <= numero; i++) {
+        factorial *= i;
+    }
+    document.getElementById("resultado").textContent = factorial;
+}
+
+// Función para aplicar el operador unario
+function operadorUnario() {
+    var numero = document.getElementById("numero").value;
+    numero = -numero;
+    document.getElementById("resultado").textContent = numero;
+}
+
+</script>
+</body>
+</html>
+<style>
+    #display-area {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    overflow: auto; /* Para agregar scroll si el contenido es 
+    demasiado grande */
+    }
+    </style>
+    </head>
+    <body>
+    <h3>Cajita de Sugerencias</h3>
+    <div id="display-area"></div>
+    <button onclick="mostrarTexto()">Mostrar Sugerencia</button>
+    <button onclick="limpiarDisplay()">Limpiar Cajita</button>
+    <script>
+    function mostrarTexto() {
+        var texto = prompt("Sugerencia");
+var displayArea = document.getElementById("display-area");
+displayArea.innerHTML += "<p>" + texto + "</p>";
+}
+function limpiarDisplay() {
+var displayArea = document.getElementById("display-area");
+displayArea.innerHTML = "";
+}
+</script>
+
+
+<style>
+    .masked-image {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
+</head>
+<body>
+<h3></h3>
+<img class="masked-image" src="logo.jpg" alt="Imagen" style="clip-path: url(#triangle-mask);">
+
+
+<svg width="0" height="0" style="position: absolute;">
+    <defs>
+        <clipPath id="triangle-mask">
+            <polygon points="100, 20 20, 180 180, 180" />
+        </clipPath>
+    </defs>
+</svg>
+
+
+<img class="masked-image" src="logo.jpg" alt="Imagen" style="clip-path: url(#square-mask);">
+
+
+<svg width="0" height="0" style="position: absolute;">
+    <defs>
+        <clipPath id="square-mask">
+            <rect x="0" y="0" width="200" height="200" />
+        </clipPath>
+    </defs>
+</svg>
+<br><br>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Imagen con Mask</title>
+    <style>
+        .masked-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h3>Serna Carbajal Valeria</h3>
+    <img class="masked-image" src="C:\Users\PC-40\Pictures\rayo.jpg" alt="Imagen" style="clip-path: url(#triangle-mask);">
+
+
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="triangle-mask">
+                <polygon points="100, 20 20, 180 180, 180" />
+            </clipPath>
+        </defs>
+    </svg>
+
+
+    <img class="masked-image" src="C:\Users\PC-40\Pictures\rayo.jpg" alt="Imagen" style="clip-path: url(#square-mask);">
+
+
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="square-mask">
+                <rect x="0" y="0" width="200" height="200" />
+            </clipPath>
+        </defs>
+    </svg>
+    <br><br>
+
+
+    <P>texto con máscara</P>
+    <svg width="200" height="100">
+    <text x="10" y="50" font-size="24" mask="url(#circleMask)">Hola mundo</text>
+    </svg>
+    <svg width="200" height="100">
+    <text x="10" y="50" font-size="24" mask="url(#rectMask)">Hola mundo</text>
+    </svg>
+  
+    <br><br>
+
+
+    <P>Forma con máscara</P>
+    <svg width="200" height="200">
+        <circle cx="100" cy="100" r="80" class="shape" mask="url(#circleMask)"/>
+    </svg>
+    <svg width="200" height="200">
+        <rect x="50" y="50" width="100" height="100" class="shape" mask="url(#rectMask)"/>
+    </svg>
+   
+</body>
+</html>

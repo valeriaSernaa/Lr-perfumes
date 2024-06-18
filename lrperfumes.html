@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lr Perfumes</title>
+    <link rel="stylesheet" href="res.css">
+</head>
+    <title>Lr Perfumes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #010102;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #010102;
+            color: #e6d92b;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color:  #e6d92b;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #010102;
+            color: #e6d92b;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(255, 255, 124); " >
+    <header>
+        <i><h1><p style="color: #e6d92b;">LR PERFUMES</p></h1></i>
+       <tt> <h1><p style="color: #e6d92b;">La hora actual es:</h1></p></tt>
+<p id="hora"></p>
+<audio id="audioPlayer" controls>
+    <source src="C:\Users\fuego\Downloads\ssstik.io_1715390458588.mp3">
+    Tu navegador no soporta la reproducción de audio. </audio>
+    
+<script>
+function mostrarHora() {
+  var fecha = new Date();
+  var hora = fecha.getHours();
+  var minutos = fecha.getMinutes();
+  var segundos = fecha.getSeconds();
+  var formatoHora = hora + ":" + minutos + ":" + segundos;
+  document.getElementById("hora").innerText = formatoHora;
+}
+
+// Actualiza la hora cada segundo
+setInterval(mostrarHora, 1000);
+
+// Mostrar la hora al cargar la página
+mostrarHora();
+</script>
+
+    </header>
+    <nav>
+    <h1>
+        <a href="acercade.html">Acerca de</a>
+        <a href="produc.html">Productos</a>
+        <a href="contactanos.html">Contacto</a>
+        <a href="clientesfre.html">Clientes Frecuentes</a>
+        <a href="precios.html">Comprobar Precios</a>
+        <a href="galeria.html">Mas Vendidos</a></h1>
+    </nav>
+    <style>
+        #miElemento {
+          visibility: hidden; /* Esto hará que el elemento sea invisible */
+          /* También puedes probar con "visible" para ver la diferencia */
+        }
+      </style>
+      </head>
+      <body>
+      
+      <p>Este es un párrafo visible.</p>
+      
+      <p id="miElemento">Este es un párrafo oculto.</p>
+      
+      <button onclick="mostrarOcultar()">Mostrar/Ocultar</button>
+      
+      <script>
+      function mostrarOcultar() {
+        var elemento = document.getElementById("miElemento");
+        if (elemento.style.visibility === "hidden") {
+          elemento.style.visibility = "visible";
+        } else {
+          elemento.style.visibility = "hidden";
+        }
+      }
+      </script>
+            <tt><h1><p style="color: #010102;">De donde nos conoces</h1></tt></p>
+            <p>
+                <input type="radio" name="status" value="Me lo recomendaron" id="interesado"> <label for="interesado">Me lo recomendaron</label> 
+                <br>
+                <input type="radio" name="status" value="De redes sociales" id="indeciso"> <label for="indeciso">De redes sociales</label> 
+                <br>
+                <input type="radio" name="status" value="Publicidad en las calles" id="no_interesado"> <label for="no_interesado">Publicidad en las calles</label> 
+            </p>
+            <button id="mostrar">Enviar</button>
+        
+            <script>
+                document.getElementById('mostrar').addEventListener('click', function() {
+                    // let valorActivo = document.querySelector('input[name="status"]:checked').value;
+                    let elementoActivo = document.querySelector('input[name="status"]:checked');
+        
+                    if(elementoActivo) {
+                        alert(elementoActivo.value);
+                    } else {
+                        alert('No hay ninún elemento activo');
+                    }
+                });
+        
+                document.getElementById('setear').addEventListener('click', function() {
+                    setRadio('status', 'interesado')
+                });
+                function setRadio(name, value) {
+                    document.querySelectorAll(`input[name="${name}"]`).forEach(element => {
+                        if(element.value === value) {
+                            element.checked = true;
+                        }
+                    });
+                }
+</script>
+        
+
+
+        <h2><p style="color: #010102;">LR PERFUMES </h2></p>
+       <h1> <i><p style="color: #e6d92b;">Somos una Tienda de productos para cualquier ocacion especial.</p>
+        <p style="color: #e6d92b;">Visita nuestra sección de productos para ver nuestra variedad de productos en venta.</p></i></h1>
+        <h1></h1>
+        
+
+<a href="acercade.html">
+  <img src="logo.jpg" width="400" height="300" alt="">
+</a>
+
+
+
+        
+    </section>
+    <footer>
+        <p>&copy; 2024 LR PERFUMES. Todos los derechos reservados.</p>
+        
+    </footer>
+</body>
+</html>

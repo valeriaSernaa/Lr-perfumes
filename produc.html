@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable</title>
+    
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        body{
+           background-image: url("fondo.jpg");
+           background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div{
+            max-width: 900px;
+            margin: auto;
+            background-color: #010102;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        .menu{
+            display: inline;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu  li  a{
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            
+        }
+        .menu > li:hover{
+            background-color: #010102;
+        }
+            
+        .submenu{
+            position: absolute;
+            display: none;
+            list-style: none;
+            width: 200px;
+            background-color: #010102;
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        .menu li:hover{
+        background-color: #010102;
+        
+        }
+        .menu li a{
+        display: block;
+        color: white;
+        padding: 15px 15px 15px 20px;
+        text-decoration: none;
+        }
+        #textoMostrado {
+            margin-top: 20px;
+            font-size: 14px;
+            background-color: #e6d92b;
+        }
+        .titulo{
+            padding: 15px 15px 15px 20px;
+            margin-top: 20px;
+            background-color: #010102;
+            color: #e6d92b;
+        }
+    </style>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('fondo.jpg');
+          background-size: cover;
+          background-position: center;
+          color: white;
+          text-align: center;
+          height: 100vh; /* Ajustar altura al 100% del viewport */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      
+        .contenido {
+          padding: 20px;
+        }
+      
+        h1 {
+          margin-top: 0;
+        }
+      
+        p {
+          font-size: 1.2rem;
+          line-height: 1.6;
+        }
+      
+        .boton {
+          background-color: #007bff;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          cursor: pointer;
+          opacity: 0.8;
+          transition: opacity 0.3s ease-in-out;
+          text-decoration: none;
+          display: inline-block;
+          margin-top: 20px;}
+      </style>
+</head>
+<body>
+    <div class="titulo">
+        <h1  style="display: inline-block; margin-right: 120px;">LR PERFUMES</h1>
+        <h3 align="right" style="display: inline-block;">Productos y Precios <br></h3>
+    </div>
+    <div class="menu" >
+        <ul>
+            <li style="display: inline-block;">
+                <a href="#">Perfumes De Mujer</a>
+                <ul class="submenu">
+                    <li><a href="#" data-texto="1">Valentino Born in Roma</a></li>
+                    <li><a href="#" data-texto="2">Orientiica Amber</a></li>
+                    <li><a href="#" data-texto="3">My Burberry Blush </a></li>
+                </ul>
+            </li>
+            <li style="display: inline-block;">
+                <a href="#">Perfumes De Hombre</a>
+                <ul class="submenu">
+                    <li><a href="#" data-texto="4">Carolina Herrera 212</a></li>
+                    <li><a href="#" data-texto="5">ONE million</a></li>
+                    <li><a href="#" data-texto="6">Club de nuit</a></li>
+                </ul>
+            </li>
+            <li style="display: inline-block;">
+                <a href="#">Bolsas</a>
+                <ul class="submenu">
+                    <li><a href="#" data-texto="7">COACH chica</a></li>
+                    <li><a href="#" data-texto="8">COACH mediana</a></li>
+                    <li><a href="#" data-texto="9">COACH mochila</a></li>
+                </ul>
+            </li>
+            <li style="display: inline-block;">
+                <a href="#">Ropa/Otros</a>
+                <ul class="submenu">
+                    <li><a href="#" data-texto="10"> Carteras</a></li>
+                    <li><a href="#" data-texto="11">Tenis</a></li>
+                    <li><a href="#" data-texto="12">Camisetas COACH</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br><br><br><br>
+    <div id="textoMostrado"></div>
+    <script>
+        const submenus = document.querySelectorAll('.submenu a');
+
+        submenus.forEach(submenu => {
+            submenu.addEventListener('click', e => {
+                e.preventDefault();
+                const texto = e.target.getAttribute('data-texto');
+                switch (texto) {
+                    case "1":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio  </h2><br>
+                            <h3>$3500.00</h3><br>
+                              <img src='valentino.jpg' width="500" height="400" alt="">
+                            </center>
+                        `
+                        ;
+                    
+                        break;
+                    case "2":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio </h2><br>
+                            <h3>$1,500.00</h3><br>
+                             <img src='arabe.jpg' width="500" height="600" alt="">
+                            </center>
+                        `;
+                        break;
+                    case "3":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio </h2><br>
+                            <h3>$2,500.00</h3><br>
+                              <img src='burberry.jpg'  width="500" height="600" alt="">
+                            </center>
+                        `;
+                        break;
+                    case "4":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio  </h2><br>
+                            <h3>$1200.00</h3><br>
+                           <img src='carrolina.jpg '  width="500" height="600" alt="">
+                            </center>
+                        `;
+                        break;
+                    case "5":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio  </h2><br>
+                            <h3>$2000.50</h3><br>
+                             <img src='one.jpg'  width="500" height="600" alt="">
+                            </center>
+                        `;
+                        break;
+                   case "6":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio</h2><br>
+                            <h3>$150.00</h3><br>
+                            <img src='urban.jpg'  width="500" height="600" alt="">
+                            </center>
+                        `;
+                        break;
+                    case "7":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio  </h2><br>
+                            <h3>$2400.00</h3><br>
+                            <img src='bolsita.jpg' width="500" height="600" alt="" >
+                            </center>
+                        `;
+                        break;
+                    case "8":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio</h2><br>
+                            <h3>$3,000.00</h3><br>
+                            <img src='bolsa.jpg' width="500" height="600" alt="">
+                            </center>
+                        `;
+                        break;
+                    case "9":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio  </h2><br>
+                            <h3>$3,500.00</h3><br>
+                            <img src='mochila.jpg' width="500" height="600" alt="">
+                            </center>
+                        `;
+                        break;
+                    case "10":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio  </h2><br>
+                            <h3>$450 c/u</h3><br>
+                            <img src='cartera.jpg' width="600" height="500" alt="">
+                            </center>
+                        `;
+                        break;
+                    case "11":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio  </h2><br>
+                            <h3>$3,600.00</h3><br>
+                            <img src='Tenis.jpg' width="600" height="500" alt="">
+                            </center>
+                        `;
+                        break;
+                    case "12":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Precio</h2><br>
+                            <h3>$550.50 c/u</h3><br>
+                            <img src='camisa.jpg'  width="500" height="600" alt="">
+                            </center>
+                        `;
+                        break;
+                    default:
+                        break;
+                }
+                
+            });
+        });
+    </script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo de Visibility en HTML</title>
+<style>
+  #miElemento {
+    visibility: hidden; /* Esto hará que el elemento sea invisible */
+    /* También puedes probar con "visible" para ver la diferencia */
+  }
+</style>
+</head>
+<body>
+
+<p>Este es un párrafo visible.</p>
+
+<p id="miElemento">Este es un párrafo oculto.</p>
+
+<button onclick="mostrarOcultar()">Mostrar/Ocultar</button>
+
+<script>
+function mostrarOcultar() {
+  var elemento = document.getElementById("miElemento");
+  if (elemento.style.visibility === "hidden") {
+    elemento.style.visibility = "visible";
+  } else {
+    elemento.style.visibility = "hidden";
+  }
+}
+</script>
+
+</body>
+</html>
